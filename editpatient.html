@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form action= "{{url_for('editpatient', patient_id=item.연번)}}" method = 'POST'>
+        <label for='name'>환자상태</label>
+        <input id='name' type = 'text' name = 'patient_name', placeholder='{{item.상태}}'>
+        <input type='submit', value='Edit'> <br><br>
+    </form>
+<a href= '{{url_for('showpatient')}}'>Cancel</a>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!doctype HTML>
+<html>
+    <body>
+        <h1> PATIENTS LIST</h1>
+        {% for item in items %}
+        {{ item.연번}}&nbsp;&nbsp;&nbsp;{{ item.확진일}}&nbsp;&nbsp;&nbsp;{{ item.지역}}&nbsp;&nbsp;&nbsp;{{ item.여행력}}&nbsp;&nbsp;&nbsp;{{ item.접촉력}}&nbsp;&nbsp;&nbsp;{{ item.병원ID}}&nbsp;&nbsp;&nbsp;{{ item.상태}} <br>
+        <a herf={{url_for('editpatient', patient_id=item.연번)}}>Edit</a><br><br>
+        {% endfor %}
+    </body>
+</html>
